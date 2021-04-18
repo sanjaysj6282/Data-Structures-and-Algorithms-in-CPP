@@ -1,2 +1,2 @@
 # Data-Structures-and-Algorithms-in-CPP
-Contains all DSA problems in C++
+This repository contains all the main data structure and algorithmic programs in C++
