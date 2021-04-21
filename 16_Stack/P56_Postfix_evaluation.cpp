@@ -4,7 +4,7 @@
 #include <math.h>
 using namespace std;
 
-// for postfix look from last -->VIMP
+// for postfix look from beginning -->VIMP
 // Understand the concept before jumping onto the problem
 
 int postfix_eval(string s){
