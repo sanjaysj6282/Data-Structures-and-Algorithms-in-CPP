@@ -12,11 +12,13 @@ using namespace std;
 //    Subtree(Root->data) < data of all other sub nodes
 
 #define vi vector<int>
-#define rep(i, a, b) for(int i=0; i<b; i++);
+#define rep(i, a, b) for(int i=a; i<b; i++);
 
 
 int main(){
     
+    // < Type, sequence/container [,Compaare]>
+    // Sequence stores data 
     priority_queue<int,vi> pq;
 
     pq.push(2);
