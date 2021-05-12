@@ -86,7 +86,10 @@ void solveSudoku(vector<vector<char>> &a){
             if(a[i][j] != '.'){
                 // True/1 to symbolise value is present
                 // [i/3][j/3] to find the grid
+                // VIMP
+                // For the key:value pair of i/3,j/3 we get a map whose Key(int(a[i][j])) : 1(value)
                 mp[{i/3, j/3}][a[i][j]-'0'] = 1;
+                // lly row[i] gives a map whose Key(int(a[i][j])) : 1 (pair)
                 row[i][a[i][j]-'0'] = 1;
                 col[j][a[i][j]-'0'] = 1;
             }
