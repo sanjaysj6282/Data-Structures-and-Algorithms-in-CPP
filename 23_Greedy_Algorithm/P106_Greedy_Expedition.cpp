@@ -60,7 +60,7 @@ int main(){
             continue;
         }
 
-        while(!pq.empty() and currFuel < l){
+        while(!pq.empty() && currFuel < l){
             currFuel += pq.top();
             pq.pop();
             ans++;
