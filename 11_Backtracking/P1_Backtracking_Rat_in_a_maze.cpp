@@ -2,7 +2,15 @@
 // Hard --- Backtracking generally....
 
 // Look video for Instructions
+/*
+    Rat In a Maze
+Problem: Given a maze(2D matrix) with obstacles, starting from (0,0) you have to
+reach (n-1, n-1). If you are currently on (x,y), you can move to (x+1,y) or (x,y+1).
+You can not move to the walls.
 
+Idea: Try all the possible paths to see if you can reach (n-1,n-1)
+
+*/
 #include <iostream>
 using namespace std;
 

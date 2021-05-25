@@ -1,6 +1,13 @@
 // Famous
 // Look video for Instructions
+/*
+    N-Queen Problem
+You have to place n queens on an nxn chessboard.
 
+Idea: Try all the possible positions for the queen. isSafe functions check whether
+the current position is safe or not.
+
+*/
 #include <iostream>
 using namespace std;
 
