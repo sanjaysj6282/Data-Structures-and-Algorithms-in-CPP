@@ -9,7 +9,14 @@
 
 #include <iostream>
 using namespace std;
-
+/*
+    Merge sort
+Idea: Divide the array into two parts, sort the left part and sort the right part and 
+merge them
+ 
+Time Complexity: O(N logN) 
+Space Complexity: O(N) Since we need an arbitrary array as well.
+*/
 void Merge(int arr[],int l,int mid,int r){
 
     int n1 = mid-l+1;

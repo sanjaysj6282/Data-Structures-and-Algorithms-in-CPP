@@ -4,7 +4,17 @@
 // Easy
 
 // O(N/2) --> O(N)  (N/2 can be written as N)
+/*
+Given an array, transform the array such that
+arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= …..
 
+Input: Given an array.
+Output: print the sorted array.
+
+Time Complexity: O(N), single pass
+Space Complexity: O(1)
+
+*/
 #include <iostream>
 using namespace std;
 

@@ -2,6 +2,16 @@
 // Count Sort
 // Hard --> think/??
 
+/*
+    Key Points
+The O(N) sort.
+Note: Only limited to small positive integers only.
+Input: Given an array.
+Output: print the sorted array.
+
+Time Complexity: O(N)
+Space Complexity: O(max(Arr))
+*/
 #include <iostream>
 using namespace std;
 

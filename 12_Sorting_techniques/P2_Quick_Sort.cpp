@@ -4,7 +4,14 @@
 
 // VIMP
 // Watch video to find its Complexity
+/*
+    Quick sort
+Idea: Select a random pivot, put it in its correct position, and sort the left and
+right part recursively.
 
+Time Complexity: Avg = O(N logN), Worst Case = O(N2
+)
+*/
 #include <iostream>
 using namespace std;
 

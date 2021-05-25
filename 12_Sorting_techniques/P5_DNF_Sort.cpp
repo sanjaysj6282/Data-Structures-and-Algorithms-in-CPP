@@ -3,7 +3,16 @@
 
 #include <iostream>
 using namespace std;
+/*
+Given an array containing only 0,1 and 2. You have to sort the array in O(N) time,
+single pass, and O(1) space.
 
+Input: Given an array, containing only 0,1, and 2.
+Output: print the sorted array.
+
+Time Complexity: O(N), single pass
+Space Complexity: O(1)
+*/
 void swap(int arr[],int i,int j){
     int temp = arr[i];
     arr[i] = arr[j];

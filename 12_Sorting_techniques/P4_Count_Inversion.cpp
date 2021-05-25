@@ -1,6 +1,37 @@
 #include <iostream>
 using namespace std;
 
+/*
+Divide And Conquer
+Count Inversions
+Count the inversions in the given array.
+Two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j
+Sample Test Case:
+A: [3, 5, 6, 9, 1, 2, 7, 8]
+Inversions: 10
+Explanation: (3,1), (3,2), (5,1), (5,2), (6,1), (6,2), (9,1), (9,2), (9,7), (9,8)
+
+
+Brute Force:
+int inv = 0;
+for(int i = 0; i < n; i++){
+    for(int j = i + 1; j < n; j++){
+        if(a[i] > a[j])
+            inv++;
+    }
+}
+cout<<inv;
+Time Complexity: O(N2)
+
+
+Using Divide and Conquer:
+Idea: Divide the array into two parts, get the inversions for the left part and get
+the inversions for the right part recursively and merge the two arrays, and get
+their inversions.
+
+O(NlogN)
+*/
+
 long long Merge(int arr[],int l,int mid,int r){
 
     long long inv = 0;
