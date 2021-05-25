@@ -8,6 +8,7 @@ using namespace std;
 
 // VIMP Concept
 // Used in many Greedy problems
+
 /*
 We are given n activities with their start and finish times. We have to select the
 maximum number of activities such that no two selected activities overlap.

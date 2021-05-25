@@ -8,6 +8,12 @@ using namespace std;
 
 // Very Easy
 // IMP
+/*
+Problem
+Given an array a[] of size n. Your task is to find the smallest subsequence with
+sum of elements equal to k.
+
+*/
 
 /*
     Approach

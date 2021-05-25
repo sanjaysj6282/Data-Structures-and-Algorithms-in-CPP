@@ -6,6 +6,20 @@ using namespace std;
 #define vi vector<int> 
 #define rep(i,a,b) for(int i=a;i<b;i++)
 
+/*
+    Problem
+You are given an array of denominations and a value X. You need to find the
+minimum number of coins to make value X.
+{Note: We have an infinite supply of each coin.}
+*/
+
+/*
+    Approach
+1. Start from the largest value, till we can include it, take it.
+2. Else move on the smaller value.
+
+*/
+
 int main(){
     int n;
     cin >> n;

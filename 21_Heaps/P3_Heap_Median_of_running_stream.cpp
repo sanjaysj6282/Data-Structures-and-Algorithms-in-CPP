@@ -7,6 +7,12 @@ using namespace std;
 #define rep(i, a, b) for(int i=0; i<b; i++);
 
 // VIMP --> Placement
+/*
+
+Problem
+Stream of numbers are coming and we have to tell median after each input.
+
+*/
 
 /*
 Optimized approach (Using heaps)

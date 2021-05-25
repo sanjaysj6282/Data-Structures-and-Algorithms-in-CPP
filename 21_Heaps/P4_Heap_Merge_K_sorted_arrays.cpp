@@ -8,6 +8,12 @@ using namespace std;
 #define pii pair<int,int>
 
 /*
+Problem
+Given k sorted arrays, our task is to combine all of them in such a way that the
+final array is also a sorted array.
+*/
+
+/*
    Efficient Solution (Using heaps)
 
 1. Create a MinHeap of pairs, i.e.

@@ -8,6 +8,13 @@ using namespace std;
 #define vii vector<pi>
 #define rep(i,a,b) for(int i=a;i<b;i++)
 
+/*
+    Problem
+We are given n items with {weight, value} of each item and the capacity of
+knapsack (bori) W. We need to put these items in the knapsack such that the final
+value of items in the knapsack is maximum.
+*/
+
 bool compare(pi p1, pi p2){
     double v1 = (double) p1.first/p1.second;
     double v2 = (double) p2.first/p2.second;
