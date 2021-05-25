@@ -1,6 +1,5 @@
 // Using STL
 // Given an array nums of distinct integers, print all the possible permutations
-
 #include "bits/stdc++.h"
 using namespace std;
 
