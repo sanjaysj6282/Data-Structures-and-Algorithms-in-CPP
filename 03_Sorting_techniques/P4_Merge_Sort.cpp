@@ -1,11 +1,7 @@
-// Read code carefully
-
+// VIMP
 // MERGE SORT
 // DIvide and conquer algorithm
 // Similar to Binary search recursion 
-
-// VIMP
-// Watch video to find its Complexity
 
 #include <iostream>
 using namespace std;
@@ -13,6 +9,8 @@ using namespace std;
     Merge sort
 Idea: Divide the array into two parts, sort the left part and sort the right part and 
 merge them
+
+2 ptr approach used in Merge
  
 Time Complexity: O(N logN) 
 Space Complexity: O(N) Since we need an arbitrary array as well.
@@ -77,7 +75,7 @@ int main(){
 
     int arr[] = {5,4,3,2,1};
 
-   MergeSort(arr,0,4);
+    MergeSort(arr,0,4);
 
     for(int i = 0;i < 5;i++)
         cout << arr[i] << " ";

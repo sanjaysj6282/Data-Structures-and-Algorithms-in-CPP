@@ -33,6 +33,7 @@ the inversions for the right part recursively and merge the two arrays, and get
 their inversions.
 
 O(NlogN)
+
 */
 
 long long Merge(int arr[],int l,int mid,int r){
@@ -67,9 +68,9 @@ long long Merge(int arr[],int l,int mid,int r){
             arr[k] = b[j];
 
             // MOST IMP
-            // VIMP
+            // Condition of inversion--> a[i] > a[j] and i < j
+            // a[i],a[i+1],..(every remaing element is greater than b) > b[j] and i < j
             inv += n1-i;
-            // a[i],a[i+1],..(every remaing element is greater than b) > b[j] i < j
 
             k++;
             j++;

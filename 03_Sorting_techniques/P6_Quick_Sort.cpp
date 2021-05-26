@@ -5,10 +5,10 @@
 // VIMP
 /*
     Quick sort
-Idea: Select a random pivot, put it in its correct position, and sort the left and
-right part recursively.
+Idea: Select a random pivot, put it in its correct position, 
+and sort the left and right part recursively.
 
-Time Complexity: Avg = O(N logN), Worst Case = O(N^2)
+Time Complexity: Avg = O(NlogN), Worst Case = O(N^2)
 
 */
 #include <iostream>
@@ -21,8 +21,10 @@ void swap(int arr[],int i,int j){
     arr[j] = temp;
 }
 
+// MostIMP
+// Look video for explanantion
 int partition(int arr[],int l,int r){
-
+    // Initialising pivot element as last one
     int pivot = arr[r];
     int i = l-1;
     for(int j = l;j < r;j++){
