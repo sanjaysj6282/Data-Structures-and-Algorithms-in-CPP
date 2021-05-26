@@ -2,10 +2,12 @@
 using namespace std;
 
 /*
-Divide And Conquer
-Count Inversions
+                Divide And Conquer
+    Count Inversions
+
 Count the inversions in the given array.
 Two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j
+
 Sample Test Case:
 A: [3, 5, 6, 9, 1, 2, 7, 8]
 Inversions: 10
@@ -21,6 +23,7 @@ for(int i = 0; i < n; i++){
     }
 }
 cout<<inv;
+
 Time Complexity: O(N2)
 
 
@@ -38,6 +41,7 @@ long long Merge(int arr[],int l,int mid,int r){
 
     int n1 = mid-l+1;
     int n2 = r-mid;
+
     // temp arrays
     int a[n1];
     int b[n2];  
@@ -97,6 +101,7 @@ long long  MergeSort(int arr[],int l,int r){
 
         inv += Merge(arr,l,mid,r);
     }
+
     return inv;
 }
 int main(){

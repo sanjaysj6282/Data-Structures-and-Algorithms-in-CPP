@@ -11,12 +11,12 @@ Output: print the sorted array.
 
 Time Complexity: O(N)
 Space Complexity: O(max(Arr))
+
 */
 #include <iostream>
 using namespace std;
 
 void countSort(int arr[],int n){
-
     int k = arr[0];
     // To find max element in array
     for(int i = 0;i < n;i++)
