@@ -3,6 +3,8 @@
 // Similar to Binary search recursion
 
 // VIMP
+// Hard
+
 /*
     Quick sort
 Idea: Select a random pivot, put it in its correct position, 
