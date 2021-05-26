@@ -1,10 +1,10 @@
 // Quick SORT
-// DIvide and conquer algorithm
-// Similar to Binary search recursion
+// Divide and conquer algorithm
+// Similar to Merge Sort
 
 // VIMP
 // Hard
-
+// Better to totally remember partition function
 /*
     Quick sort
 Idea: Select a random pivot, put it in its correct position, 
@@ -23,18 +23,23 @@ void swap(int arr[],int i,int j){
     arr[j] = temp;
 }
 
-// MostIMP
-// Look video for explanantion
+/* 
+   This function takes last element as pivot, places the pivot element at its correct position 
+   in sorted array, and places all smaller (smaller than pivot) to left of pivot and 
+   all greater elements to right of pivot 
+*/
 int partition(int arr[],int l,int r){
     // Initialising pivot element as last one
     int pivot = arr[r];
-    int i = l-1;
+    int i = l-1; // Index of smaller element and indicates the 
+                 // correct position of pivot found so far
     for(int j = l;j < r;j++){
         if(arr[j] < pivot){
             i++;
             swap(arr,i,j);
         }
     }
+    // i is the index "just before" pivot so...
     swap(arr,i+1,r);
     return i+1;
 }
