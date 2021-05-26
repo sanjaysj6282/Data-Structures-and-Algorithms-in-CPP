@@ -106,11 +106,6 @@ long long  MergeSort(int arr[],int l,int r){
     return inv;
 }
 int main(){
-
-    // int arr[] = {5,4,3,2,1};
-
-    // cout << MergeSort(arr,0,4);
-
     int n;
     cin >> n;
     int arr[n];
