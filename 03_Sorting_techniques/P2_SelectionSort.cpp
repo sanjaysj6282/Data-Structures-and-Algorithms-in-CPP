@@ -2,6 +2,7 @@
 using namespace std;
 
 //Selection Sort
+// Easiest sort for me
 /*
     Main Idea
 Find the min element in unsorted array and swap

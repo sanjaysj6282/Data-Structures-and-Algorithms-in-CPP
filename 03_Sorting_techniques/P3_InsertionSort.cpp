@@ -1,6 +1,17 @@
 #include <iostream>
 using namespace std;
 
+/*
+    Main Idea
+Insert an element from unsorted array to its correct position
+in sorted array
+
+Take 1st element as sorted array
+Here we start from i=1, 
+For each element in unsorted array we put in sorted array by 
+making elements greater than it forward
+
+*/
 void Insertion_sort(int arr[],int n){
 
     for(int i =  1; i < n;i++){
