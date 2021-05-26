@@ -7,9 +7,9 @@ Insert an element from unsorted array to its correct position
 in sorted array
 
 Take 1st element as sorted array
-Here we start from i=1, 
-For each element in unsorted array we put in sorted array by 
-making elements greater than it forward
+1. Here we start from i=1, 
+2. For each element in unsorted array we put in sorted array by 
+   making elements greater than it forward
 
 */
 void Insertion_sort(int arr[],int n){
@@ -17,6 +17,7 @@ void Insertion_sort(int arr[],int n){
     for(int i =  1; i < n;i++){
         int current = arr[i];
         int j = i-1;
+        // Making space to put arr[i] at right index(Step 2)
         while (arr[j] > current && j >= 0){
             arr[j+1] = arr[j];
             j--;

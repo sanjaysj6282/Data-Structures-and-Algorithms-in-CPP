@@ -6,10 +6,9 @@ using namespace std;
   Repeatedly swap 2 adjacent elent if they 
   are in wrong order
 
-  After complete swaping by iterating once
-  we get "largest" element in final position 
+  After complete swaping by iterating once we get "largest" element in final position 
   So we've to n-1 iterations of such to get Sorted array
-  but keep in mind that on each iteration we need to reduce the no of iterations by1
+  but keep in mind that on each iteration we need to reduce the no of iterations by 1
   i.e, 1st iteration : n-1
        2nd ite       : n-2
        n-1 iter      : n-i (in for loop) 
