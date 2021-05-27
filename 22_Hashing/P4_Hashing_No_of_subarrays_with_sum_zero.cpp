@@ -28,32 +28,32 @@ using namespace std;
 
 */
 int main(){
-    int n;
-    cin >> n;
-    vi a(n);
+   int n;
+   cin >> n;
+   vi a(n);
 
-    rep(i,0,n)
-        cin >> a[i];
+   rep(i,0,n)
+      cin >> a[i];
 
-    mi cnt;
-    int prefSum=0;
+   mi cnt;
+   int prefSum=0;
 
-    rep(i, 0, n){
+   rep(i, 0, n){
         prefSum +=a[i];
         cnt[prefSum]++;
-    }
+   }
 
-    int ans=0;
-    mi :: iterator it;
+   int ans=0;
+   mi :: iterator it;
 
-    for(it=cnt.begin(); it != cnt.end(); it++){
-        int m = it->second;
-        // mC2 = (m*(m-1))/2
-        ans += (m*(m-1))/2;
-        if(it->first == 0)
-            ans += it->second;
-    }
-    cout << ans << endl;
+   for(it=cnt.begin(); it != cnt.end(); it++){
+      int m = it->second;
+      // mC2 = (m*(m-1))/2
+      ans += (m*(m-1))/2;
+      if(it->first == 0)
+         ans += it->second;
+   }
+   cout << ans << endl;
 
-    return 0;
+   return 0;
 }
