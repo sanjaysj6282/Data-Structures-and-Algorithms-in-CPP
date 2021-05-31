@@ -4,6 +4,7 @@
 int f() {
     int left = 0, right = n - 1;
     while(left <= right) {
+        // mid=(l+r)/2 results in overflow in large value of l, r -->2^64 etc
         int mid = left + (right - left) / 2;
         if(a[mid] == target) {
             return mid;
