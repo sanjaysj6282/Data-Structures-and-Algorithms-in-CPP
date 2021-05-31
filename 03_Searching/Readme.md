@@ -5,10 +5,12 @@
 
 2. Binary Search  (Decrease and conquer Approach)
    Golden Rule : "OPTIMISATION OVER SEARCH"
-   Its mostly with sorted/ similar type of array
-                OR
+   Its mostly with sorted/ similar type of array </br>
+                OR    </br>
    "You 've to maximise/minimise but limiting to some constraints
    eg. Agressive Cows, Book Allocation
+        In such type of problems mostly high & low should be taken as one which is to be
+        Minimised/Maximise/(optimised)
 
    For basic questions its used for
    1. Looking for a target value
