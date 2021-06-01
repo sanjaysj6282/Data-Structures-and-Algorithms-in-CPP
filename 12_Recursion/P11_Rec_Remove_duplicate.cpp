@@ -10,7 +10,7 @@ string removeDup(string s){
     
     // Study the execution very carefully
     char ch = s[0];
-    cout << s <<"  "<< ch << endl;
+    // cout << s <<"  "<< ch << endl;
 
     // if(ch != NULL)
     // cout << ch << "\n";
