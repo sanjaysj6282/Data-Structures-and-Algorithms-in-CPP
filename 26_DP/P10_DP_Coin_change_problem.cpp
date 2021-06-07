@@ -101,6 +101,23 @@ int coinChange_i(vi &a, int n, int x){
     }
 
     return dp[n][x];
+
+    
+    
+    // Space 0(N)-->version
+
+    // long long int table[n+1];         
+    //      // Initialize all table values as 0         
+    //      memset(table, 0, sizeof(table));         
+    //      // Base case (If given value is 0)         
+    //      table[0] = 1;         
+    //      // Pick all coins one by one and update the table[] values         
+    //      // after the index greater than or equal to the value of the         
+    //      // picked coin         
+    //      for(long long int i=0; i<m; i++)         
+    //         for(long long int j=S[i]; j<=n; j++)         
+    //             table[j] += table[j-S[i]]; 
+
 }
 
 
