@@ -18,6 +18,18 @@ using namespace std;
 
 const int N=1e4+3, MOD=1e9+7;
 
+/*
+    Algorithm
+1. Make the current node as visited and also mark
+   index in recursion stack
+
+2. Fill all the vertices which are not visited and are 
+   adjacent to current node
+
+3. If the adjacent vertices are already marked in recursion 
+   stack then a cycle is found
+   
+*/   
 
 // DFS 
 bool isCycle(int src, vvi &adj, vector<bool> &vis, vi stack){  

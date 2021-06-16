@@ -17,6 +17,13 @@ using namespace std;
 
 const int N=1e4+3, MOD=1e9+7;
 
+/*
+    Algorithm
+1. Keep on traversing the graph
+2. If u find a node already visited(except parent node).
+   a cycle is found
+   
+*/
 
 // DFS 
 bool isCycle(int src, vvi &adj, vector<bool> &vis, int parent){
