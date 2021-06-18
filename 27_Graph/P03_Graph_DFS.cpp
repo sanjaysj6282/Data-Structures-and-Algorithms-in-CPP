@@ -32,10 +32,9 @@ void dfs(int node){
 
     // Inorder
     vi :: iterator it;
-    for(it=adj[node].begin(); it!=adj[node].end(); it++){
+    for(it=adj[node].begin(); it!=adj[node].end(); it++)
         if(!vis[*it])
             dfs(*it);
-    }
 
     // postorder
     cout << node << " ";
@@ -57,11 +56,10 @@ int main(){
     }
 
     // Since graph may be disconnected/connected
-    for(int i=1; i<=n; i++){
-        if(!vis[i]){
+    for(int i=1; i<=n; i++)
+        if(!vis[i])
             dfs(i);
-        }
-    }
+        
 
     return 0;
 }
