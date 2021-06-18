@@ -56,7 +56,12 @@ int main(){
         adj[y].push_back(x);
     }
 
-    dfs(1);
+    // Since graph may be disconnected/connected
+    for(int i=1; i<=n; i++){
+        if(!vis[i]){
+            dfs(i);
+        }
+    }
 
     return 0;
 }

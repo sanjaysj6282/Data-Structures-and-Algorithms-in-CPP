@@ -30,30 +30,37 @@ signed main(){
     cin >> n >> m;
 
     int x, y;
-    for(int i=0; i<m; i++){
+    for(int i=0; i<n; i++){
         cin >> x >>y;
 
         adj[x].push_back(y);
         adj[y].push_back(x);
     }
 
-    queue<int> q;
-    // Let the 1st element be 1
-    q.push(1);
-    vis[1]=1;
+    // Since graph may be disconnected/connected
+    for(int i=1; i<=n; i++){
+        if(!vis[i]){
+            queue<int> q;
+            // Let the 1st element be 1
+            q.push(i);
+            vis[i]=1;
 
-    while(!q.empty()){
-        int node=q.front();
-        q.pop();
+            while(!q.empty()){
+                int node=q.front();
+                q.pop();
 
-        cout << node << endl;
+                // Printing BFS in order
+                cout << node << endl;
 
-        vi :: iterator it;
-        for(it=adj[node].begin(); it!=adj[node].end(); it++){
-            if(!vis[*it]){
-                vis[*it]=1;
-                q.push(*it);
-            } 
+                vi :: iterator it;
+                // Better --> for(auto i:adj[node])
+                for(it=adj[node].begin(); it!=adj[node].end(); it++){
+                    if(!vis[*it]){
+                        vis[*it]=1;
+                        q.push(*it);
+                    } 
+                }
+            }
         }
     }
 
