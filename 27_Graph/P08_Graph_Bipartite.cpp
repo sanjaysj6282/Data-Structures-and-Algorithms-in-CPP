@@ -54,6 +54,7 @@ void color(int u, int curr){
     }
 }
 
+
 int main(){
     int n, m;
     cin >> n >> m;
@@ -70,15 +71,14 @@ int main(){
         adj[y].push_back(x);
     }
 
-    rep(i, 0, n){
-        if(!vis[i]){
+
+    rep(i, 0, n)
+        if(!vis[i])
             color(i, 0);
-        }
-    }
+
 
     if(bipart)
         cout << "Graph is bipartite" << endl;
-
     else
         cout << "Graph is not bipartite" << endl;
 
