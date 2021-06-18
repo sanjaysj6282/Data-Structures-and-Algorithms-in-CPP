@@ -35,6 +35,7 @@ vvi adj;
 vector<bool> vis;
 bool bipart=true;
 
+// Tricky
 // Current node "u" and current color "curr"
 void color(int u, int curr){
     // If its coloured and its color is not as expected
@@ -44,13 +45,15 @@ void color(int u, int curr){
     }
 
     col[u]=curr;
+
     if(vis[u])
         return;
-
-    vis[u]=true;
+    else
+        vis[u]=true;
+        
     for(auto i: adj[u]){
         // Interchanging 0 and 1
-        color(i, curr xor 1);
+        color(i, 1-curr);
     }
 }
 
