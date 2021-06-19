@@ -17,6 +17,7 @@ using namespace std;
 
 const int N=1e4+3, MOD=1e9+7;
 
+// Topo sort is only present in "DAG"
 int main(){
     int n, m; 
     cin >> n >> m;
@@ -24,9 +25,8 @@ int main(){
     vi adj[N];
     vi indeg(n, 0);
 
-    
     int x, y;
-    for(int i=0; i<m; i++){
+    for(int i=0; i<n; i++){
         cin >> x >> y;
 
         adj[x].push_back(y);
@@ -38,9 +38,9 @@ int main(){
         if(indeg[i]==0)
             pq.push(i);
 
-    int cnt=0;
+    // int cnt=0;
     while(!pq.empty()){
-        cnt++;
+        // cnt++;
         int x=pq.front();
         pq.pop();
         cout << x << " ";
