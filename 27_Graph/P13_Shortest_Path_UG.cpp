@@ -32,7 +32,7 @@ const int N=1e4+3, MOD=1e9+7;
     arr[adj[*it]]=min(arr[adj[*it]], arr[node]+1) --> 1st in loop
 
     Since even if we update dist from reduced node(it)
-    then its not inserted in Q then it will not the susequent
+    then its not inserted in Q then it will not the subsequent
     nodes of it 
 */
 
