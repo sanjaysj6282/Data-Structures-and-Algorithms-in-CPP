@@ -26,7 +26,7 @@ int main(){
     vi indeg(n, 0);
 
     int x, y;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<m; i++){
         cin >> x >> y;
 
         adj[x].push_back(y);
