@@ -21,57 +21,71 @@ const int N=1e4+3, MOD=1e9+7;
 /*
     Algorithm
 1. Make the current node as visited and also mark
-   index in recursion stack
+   index in recursion stack/dfsVis
 
 2. Fill all the vertices which are not visited and are 
    adjacent to current node
 
 3. If the adjacent vertices are already marked in recursion 
-   stack then a cycle is found
+   stack/dfsVis then a cycle is found
    
 */   
 
 // DFS 
-bool isCycle(int src, vvi &adj, vector<bool> &vis, vi stack){  
-    stack[src]=true;
-    if(!vis[src]){
-        vis[src]=true;
-        for(auto i : adj[src]){
-            if(!vis[i] && isCycle(i, adj, vis, stack))
-                return true;
-
-            if(stack[i])
-                return true;
+class Solution {
+private:
+    bool checkCycle(int node, vector<int> adj[], int vis[], int dfsVis[]) {
+        vis[node] = 1; 
+        dfsVis[node] = 1; 
+        for(auto it : adj[node]) {
+            if(!vis[it]) 
+                if(checkCycle(it, adj, vis, dfsVis)) 
+                    return true;
+            // Means its vis[it]=1 and dfsVis[it]=1 return true
+            else if(dfsVis[it]) 
+                return true; 
         }
+
+        dfsVis[node] = 0; 
+        return false;
     }
-    stack[src]=false;
-    return false;
-}
+
+public:
+	bool isCyclic(int N, vector<int> adj[]) {
+	   int vis[N], dfsVis[N]; 
+	   memset(vis, 0, sizeof vis); 
+	   memset(dfsVis, 0, sizeof dfsVis); 
+	   
+	    for(int i = 0;i<N;i++) 
+	        if(!vis[i]) 
+	            if(checkCycle(i, adj, vis, dfsVis))
+	               return true; 
+	    
+	    return false; 
+	}
+};
+
+
+
 
 int main(){
-    int n, m;
-    cin >> n >> m;
+    int t;
+    cin >> t;
+    while(t--){
+    	int V, E;
+    	cin >> V >> E;
 
-    vvi adj(n);
+    	vector<int> adj[V];
 
-    rep(i, 0, m){
-        int x, y;
-        cin >> x >> y;
+    	for(int i = 0; i < E; i++){
+    		int u, v;
+    		cin >> u >> v;
+    		adj[u].push_back(v);
+    	}
 
-        adj[x].push_back(y);
+    	Solution obj;
+    	cout << obj.isCyclic(V, adj) << "\n";
     }
-
-    bool cycle =false;
-    vi stack(n, 0);
-    vector<bool> vis(n, false);
-    rep(i, 0, n)
-        if(!vis[i] && isCycle(i, adj, vis, stack))
-            cycle = true;
-    
-    if(cycle)
-        cout << "Cycle is present" << endl;
-    else
-        cout << "Cycle is not present" << endl; 
 
     return 0;
 }
