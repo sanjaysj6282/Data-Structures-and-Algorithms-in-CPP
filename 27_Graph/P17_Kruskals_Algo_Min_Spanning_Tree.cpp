@@ -11,20 +11,32 @@ struct node {
     }
 };
 
+// Its a greedy approach
+// Uses Disjoint set unio by rank and path compression
+// We store it in a linear data structure instead of adjacency list
+
+
+
+// Custom comparator to sort based in weights
 bool comp(node a, node b) 
     return a.wt < b.wt; 
 
+// To find parent of any element
 int findPar(int u, vector<int> &parent) {
     if(u == parent[u]) 
         return u; 
 
+	// PATH COMPRESSION -->parent[i]=
     return parent[u] = findPar(parent[u], parent); 
 }
 
+// Join 2 subgraphs
 void unionn(int u, int v, vector<int> &parent, vector<int> &rank) {
     u = findPar(u, parent);
     v = findPar(v, parent);
 
+	// Join smaller to larger to reduce the total height
+	// So as to reduce the time for "findpar"
     if(rank[u] < rank[v]) 
     	parent[u] = v;
     
@@ -58,6 +70,8 @@ int main(){
 	int cost = 0;
 	vector<pair<int,int>> mst; 
 	for(auto it : edges) {
+		// Both dont have same parents means they are 
+		// disconnected (the are not of same component)
 	    if(findPar(it.v, parent) != findPar(it.u, parent)) {
 	        cost += it.wt; 
 	        mst.push_back({it.u, it.v}); 
