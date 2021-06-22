@@ -25,16 +25,17 @@ struct Node{
 };
 
 int search(int inorder[], int start, int end, int curr){
-    for(int i=start; i<=end; i++){
+    for(int i=start; i<=end; i++)
         if(inorder[i] == curr)
             return i;
-    }
+    
     return -1;
 }
 
 Node* buildTree(int preorder[], int inorder[], int start,int end){
     static int idx=0;
 
+    // Base case
     if(start>end)
         return NULL;
 
@@ -42,6 +43,7 @@ Node* buildTree(int preorder[], int inorder[], int start,int end){
     Node* node = new Node(curr);
     idx++;
 
+    // If there is only 1 element
     if(start == end)
         return node;
 

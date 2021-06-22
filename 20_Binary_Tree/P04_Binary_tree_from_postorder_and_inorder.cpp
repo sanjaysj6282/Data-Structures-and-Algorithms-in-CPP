@@ -25,17 +25,20 @@ struct Node{
 };
 
 int search(int inorder[], int start, int end, int curr){
-    for(int i=start; i<=end; i++){
+    for(int i=start; i<=end; i++)
         if(inorder[i] == curr)
             return i;
-    }
+    
     return -1;
 }
 
+// Post is completely opposite to inorder
 Node* buildTree(int postorder[], int inorder[], int start,int end){
     // static int idx = sizeof(postorder)/sizeof(postorder[0]);
+    // Since root is at end in postorder
     static int idx = 4;
 
+    // Base case
     if(start>end)
         return NULL;
 
@@ -43,6 +46,7 @@ Node* buildTree(int postorder[], int inorder[], int start,int end){
     Node* node = new Node(curr);
     idx--;
 
+    // If there is only 1 element
     if(start==end)
         return node;
 
