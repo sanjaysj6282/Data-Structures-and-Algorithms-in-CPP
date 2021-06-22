@@ -57,7 +57,6 @@ void zigzagTraversal(Node* root){
                 nextLevel.push(Top->left);           
         }
 
-        ;
 
         if(currLevel.empty()){ 
             stack<Node*> temp = currLevel;
