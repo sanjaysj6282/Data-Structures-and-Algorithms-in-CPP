@@ -9,7 +9,7 @@ struct Node{
     Node(int val){
         data = val;
         left = NULL;
-        right = __null;
+        right = NULL;
     }
 };
 
@@ -43,10 +43,10 @@ bool isIdentical(Node* root1, Node* root2){
     // OR
     // Better Code(in term of understanding)
 
-    if(root1==NULL and root2==NULL)
+    if(root1==NULL && root2==NULL)
         return true;
 
-    else if(root1==NULL or root2==NULL)
+    else if(root1==NULL || root2==NULL)
         return false;
 
     else{

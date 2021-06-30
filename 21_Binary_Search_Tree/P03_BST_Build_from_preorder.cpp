@@ -33,7 +33,7 @@ Node* constructBST(int preorder[], int *preorderIdx, int key, int min, int max, 
 
     Node* root = NULL;
     // Condition for BST
-    if(key > min and key < max){
+    if(key > min && key < max){
         root = new Node(key);
         *preorderIdx = *preorderIdx + 1;
         

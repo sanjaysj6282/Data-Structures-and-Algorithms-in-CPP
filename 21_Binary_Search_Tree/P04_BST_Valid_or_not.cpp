@@ -38,16 +38,16 @@ bool checkBST(Node* root, Node* min=NULL, Node* max=NULL){
     if(root == NULL)
         return true;
 
-    if(min != NULL and root->data <= min->data) 
+    if(min != NULL && root->data <= min->data) 
         return false;
     
-    if(max != NULL and root->data >= max->data)
+    if(max != NULL && root->data >= max->data)
         return false;
     
     bool leftValid = checkBST(root->left, min, root);
     bool rightValid = checkBST(root->right, root, max);
 
-    return leftValid and rightValid;
+    return leftValid && rightValid;
 }
 
 int main(){

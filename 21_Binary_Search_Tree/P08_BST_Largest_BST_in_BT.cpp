@@ -9,7 +9,7 @@ struct Node{
     Node(int val){
         data = val;
         left = NULL;
-        right = __null;
+        right = NULL;
     }
 };
 
@@ -41,7 +41,7 @@ Info largestBST(Node* root){
         return {INT_MAX, 0, INT_MIN, 0, true};
     
     // Check leaf node
-    if(root->left == NULL and root->right == __null)
+    if(root->left == NULL && root->right == NULL)
         return {root->data, root->data, 1, 1, true};
 
     Info leftInfo = largestBST(root->left);

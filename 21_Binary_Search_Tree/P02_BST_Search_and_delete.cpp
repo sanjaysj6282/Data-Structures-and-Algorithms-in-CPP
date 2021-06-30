@@ -71,7 +71,7 @@ Node* searchInBST(Node* root, int key){
 
 Node* inorderSucc(Node* root){
     Node* curr = root;
-    while(curr and curr->left != NULL)
+    while(curr && curr->left != NULL)
         curr = curr->left;
     
     return curr;
