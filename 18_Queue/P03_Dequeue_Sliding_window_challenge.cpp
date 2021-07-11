@@ -37,7 +37,7 @@ int main(){
     // eg k=3, {5 4 3 2} --> q{0,1,2}
 
     for(int i=0;i<k;i++){
-        while(!q.empty() and a[q.front()]<a[i])
+        while(!q.empty() && a[q.front()]<a[i])
             q.pop_back();
         
         q.push_back(i);
@@ -59,7 +59,7 @@ int main(){
         if(q.front()==i-k)  //i.e,
             q.pop_front();
         
-        while(!q.empty() and a[q.front()]<a[i])
+        while(!q.empty() && a[q.front()]<a[i])
             q.pop_back();
 
         q.push_back(i);

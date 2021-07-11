@@ -28,7 +28,7 @@ class queue{
     }
 
     void pop(){
-        if((front==-1) or front>back){
+        if((front==-1) || front>back){
            cout << "No elements in queue" << endl;
            return; 
         }
@@ -36,7 +36,7 @@ class queue{
     }
 
     int  peek(){
-        if(front==-1 or front>back){
+        if(front==-1 || front>back){
            cout << "No elements in queue" << endl;
            return -1; 
         }
@@ -44,7 +44,7 @@ class queue{
     }
 
     bool empty(){
-        if(front==-1 or front>back){
+        if(front==-1 || front>back){
            return true;
         }
         return false;
