@@ -11,18 +11,18 @@ bool isValid(string s){
     bool ans = true;
 
     for(int i=0;i<n;i++){
-        if(s[i]=='{' or s[i]=='[' or s[i]=='(' )
+        if(s[i]=='{' || s[i]=='[' || s[i]=='(' )
             st.push(s[i]);
 
         else if(s[i]==')'){
-            if(!st.empty() and st.top()=='(')
+            if(!st.empty() && st.top()=='(')
                 st.pop();
             else {
                 ans = false;
                 break;
             }
         }
-        else if(!st.empty() and s[i]=='}'){
+        else if(!st.empty() && s[i]=='}'){
             if(st.top()=='{')
                 st.pop();
             else {
@@ -30,7 +30,7 @@ bool isValid(string s){
                 break;
             }
         }
-        else if(!st.empty() and s[i]==']'){
+        else if(!st.empty() && s[i]==']'){
             if(st.top()=='[')
                 st.pop();
             else {

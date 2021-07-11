@@ -12,7 +12,7 @@ int prefix_eval(string s){
     stack<int> st;
 
     for(int i=s.length()-1;i>=0;i--){
-        if('0' <= s[i] and s[i]  <= '9')
+        if('0' <= s[i] && s[i]  <= '9')
             st.push(s[i]-'0');
             
         else{
