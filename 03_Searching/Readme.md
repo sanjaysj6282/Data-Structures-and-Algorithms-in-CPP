@@ -7,7 +7,7 @@
    Golden Rule : "OPTIMISATION OVER SEARCH"
    Its mostly with sorted/ similar type of array </br>
                 OR    </br>
-   If min(max) / max(min) has to be found 
+   If min(max) / max(min) has to be found </br>
                 OR    </br>
    "You 've to maximise/minimise but limiting to some constraints </br>
    eg. Agressive Cows, Book Allocation
