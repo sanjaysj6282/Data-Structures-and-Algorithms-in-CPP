@@ -59,7 +59,7 @@ int main(){
     cout << "\n";
     inorder(root);
     cout << "\n";
-    preorder(root);
+    postorder(root);
 
     return 0;
 }
