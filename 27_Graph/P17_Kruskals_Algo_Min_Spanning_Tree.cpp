@@ -18,8 +18,9 @@ struct node {
 
 
 // Custom comparator to sort based in weights
-bool comp(node a, node b) 
-    return a.wt < b.wt; 
+bool comp(node a, node b) {
+    return (a.wt < b.wt); 
+}
 
 // To find parent of any element
 int findPar(int u, vector<int> &parent) {

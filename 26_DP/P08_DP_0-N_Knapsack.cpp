@@ -35,7 +35,7 @@ int knapsack_m(int value[] , int wt[] , int n , int W){
     else{
         // Include n th item ,// Doesn't include nth item
         dp[n][W] = max(knapsack_m(value , wt , n, W-wt[n-1]) + value[n-1], 
-                       knapsack_m(value , wt  , n-1, W));
+                       knapsack_m(value , wt , n-1, W));
     }
 
     return dp[n][W];

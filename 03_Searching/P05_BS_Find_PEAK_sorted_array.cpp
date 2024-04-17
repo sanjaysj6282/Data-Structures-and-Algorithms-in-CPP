@@ -31,3 +31,4 @@ int findPeak(int arr[], int n)
 {
     return findPeakUtil(arr, 0, n - 1, n);
 }
+

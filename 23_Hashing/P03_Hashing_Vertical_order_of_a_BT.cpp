@@ -35,7 +35,7 @@ struct Node{
 map<int, vector<int>> mp;
 
 void getVerticalOrder(Node* root,int hd=0){
-    if(root == NULL) 
+    if(!root) 
         return;
 
      mp[hd].push_back(root->data);

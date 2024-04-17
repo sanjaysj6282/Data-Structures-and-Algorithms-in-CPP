@@ -23,4 +23,9 @@ int main(){
     for(it=freq.begin(); it!=freq.end(); it++)
         // Similar to pair
         cout << it->first << " " << it->second << "\n"; 
+    
+    map<int, int> :: iterator it;
+    for(it=freq.begin(); it!=freq.end(); it++){
+        cout << it->first;
+    }
 }
